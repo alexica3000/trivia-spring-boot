@@ -8,9 +8,13 @@ import java.util.List;
 public interface QuestionRepository {
     List<Question> findQuestionsByLevel(int level);
 
-    boolean save(Question question);
+    Question findQuestionById(Long questionId);
+
+    Long save(Question question);
 
     boolean delete(Question question);
+
+    boolean deleteById(Long questionId);
 
     List<Question> findAll();
 }
